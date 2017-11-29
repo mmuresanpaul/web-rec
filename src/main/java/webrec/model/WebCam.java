@@ -86,7 +86,7 @@ public class WebCam implements WebcamMotionListener {
 		directory.mkdirs();
 		File pathFile = new File(directoryPath + "/" +
 				   	getDateAsString() + ".png");
-		
+		pathFile.createNewFile();
 		ImageIO.write(image, "PNG", pathFile);
 	}
 
